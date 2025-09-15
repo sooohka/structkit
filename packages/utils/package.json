@@ -11,10 +11,11 @@
     "scripts": {
         "build": "tsc",
         "clean": "git clean -xdf .cache .turbo dist node_modules",
-        "local": "tsc",
+        "dev": "tsc",
+        "test": "vitest",
+        "test:watch": "vitest watch",
         "typecheck": "tsc --noEmit --emitDeclarationOnly false"
     },
-    "dependencies": {},
     "devDependencies": {
         "@sooohka/tsconfig": "workspace:*"
     }

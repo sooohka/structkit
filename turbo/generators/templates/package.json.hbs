@@ -11,8 +11,10 @@
     "scripts": {
         "build": "tsc",
         "clean": "git clean -xdf .cache .turbo dist node_modules",
-        "local": "tsc",
-        "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+        "dev": "tsc",
+        "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+        "test": "vitest",
+        "test:watch": "vitest watch"
     },
     "dependencies": {},
     "devDependencies": {

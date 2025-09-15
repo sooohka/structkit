@@ -2,7 +2,7 @@
     "name": "root",
     "version": "1.0.0",
     "private": true,
-    "keywords": [],
+    "description": "",
     "author": "sooohka",
     "type": "module",
     "scripts": {
