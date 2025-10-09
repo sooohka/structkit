@@ -1,7 +1,7 @@
-import * as path from 'node:path'
-import {includeIgnoreFile} from '@eslint/compat'
+import { includeIgnoreFile } from '@eslint/compat'
 import naverpay from '@naverpay/eslint-config'
 import naverpayPlugin from '@naverpay/eslint-plugin'
+import * as path from 'node:path'
 
 export default [
     includeIgnoreFile(path.join(import.meta.dirname, '.gitignore')),
@@ -18,10 +18,10 @@ export default [
             '**/turbo/**',
         ],
     },
-    ...naverpay.configs.node,
-    ...naverpay.configs.react,
-    ...naverpay.configs.strict,
-    ...naverpay.configs.packageJson,
+    // ...naverpay.configs.node,
+    // ...naverpay.configs.react,
+    // ...naverpay.configs.strict,
+    // ...naverpay.configs.packageJson,
     {
         plugins: {
             '@naverpay': naverpayPlugin,

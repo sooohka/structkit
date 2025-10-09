@@ -1,0 +1,10 @@
+{
+    "Schema": "https://json.schemastore.org/tsconfig",
+    "extends": "@sooohka/tsconfig/internal-package.json",
+    "compilerOptions": {
+        "lib": ["ES2022"],
+        "typeRoots": ["./types"]
+    },
+    "include": ["*.ts", "src"],
+    "exclude": ["node_modules"]
+}
