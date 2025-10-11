@@ -2,12 +2,21 @@
     "name": "@sooohka/queue",
     "version": "0.0.0",
     "private": true,
-    "description": "queue integration for monorepo projects.",
+    "description": "A native-like Queue implementation with full TypeScript support and Array-like iterators",
+    "keywords": [
+        "queue",
+        "data-structure",
+        "fifo",
+        "typescript",
+        "iterable",
+        "native"
+    ],
     "license": "MIT",
     "type": "module",
     "files": [
         "dist",
-        "package.json"
+        "package.json",
+        "README.md"
     ],
     "exports": {
         ".": {
