@@ -6,6 +6,7 @@
     "author": "sooohka",
     "type": "module",
     "scripts": {
+        "dev": "turbo run dev",
         "build": "turbo run build",
         "clean": "turbo run clean && rm -rf ./node_modules && pnpm i",
         "lint": "eslint . --cache --cache-location .cache/.eslintcache",

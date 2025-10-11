@@ -1,6 +1,2 @@
-import '@sooohka/array'
-export const utils = 'utils'
+import '@sooohka/queue';
 
-const k: string[] = []
-
-k.add('')

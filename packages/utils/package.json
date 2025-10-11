@@ -9,17 +9,20 @@
         ".": "./src/index.ts"
     },
     "scripts": {
+        "dev": "nodemon --watch 'src/**/*.ts' --ext 'ts' --exec tsx ./src/index.ts",
         "build": "tsc",
         "clean": "git clean -xdf .cache .turbo dist node_modules",
-        "dev": "tsc",
         "test": "vitest",
         "test:watch": "vitest watch",
         "typecheck": "tsc --noEmit --emitDeclarationOnly false"
     },
     "dependencies": {
-        "@sooohka/array": "file:/Users/ably/Desktop/personal/sooohka/packages/array/sooohka-array-0.0.0.tgz"
+        "@sooohka/queue": "workspace:*"
     },
     "devDependencies": {
-        "@sooohka/tsconfig": "workspace:*"
+        "@sooohka/tsconfig": "workspace:*",
+        "@types/node": "^24.7.0",
+        "nodemon": "^3.1.10",
+        "tsx": "^4.20.6"
     }
 }
