@@ -1,44 +1,45 @@
 {
-    "name": "@sooohka/queue",
-    "version": "0.0.0",
-    "private": false,
-    "description": "A native-like Queue implementation with full TypeScript support and Array-like iterators",
-    "keywords": [
-        "queue",
-        "data-structure",
-        "fifo",
-        "typescript",
-        "iterable",
-        "native"
-    ],
-    "license": "MIT",
-    "type": "module",
-    "files": [
-        "dist",
-        "package.json",
-        "README.md"
-    ],
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "require": "./dist/index.cjs",
-            "import": "./dist/index.js"
-        },
-        "./package.json": "./package.json"
+  "name": "@sooohka/queue",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A native-like Queue implementation with full TypeScript support and Array-like iterators",
+  "keywords": [
+    "queue",
+    "data-structure",
+    "fifo",
+    "typescript",
+    "iterable",
+    "native"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "browser": "./dist/index.global.js",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
     },
-    "scripts": {
-        "build": "tsup",
-        "clean": "git clean -xdf .cache .turbo dist node_modules",
-        "dev": "tsup --watch && 'node scripts/dts-as-module.js'",
-        "test": "vitest",
-        "test:watch": "vitest watch",
-        "typecheck": "tsc --noEmit --emitDeclarationOnly false"
-    },
-    "dependencies": {},
-    "devDependencies": {
-        "@sooohka/tsconfig": "workspace:*",
-        "@types/jscodeshift": "^17.3.0",
-        "@types/node": "^24.7.0",
-        "tsup": "^8.5.0"
-    }
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsup --watch && 'node scripts/dts-as-module.js'",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@sooohka/tsconfig": "workspace:*",
+    "@types/jscodeshift": "^17.3.0",
+    "@types/node": "^24.7.0",
+    "tsup": "^8.5.0"
+  }
 }
