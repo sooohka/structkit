@@ -17,7 +17,11 @@
         "checkJs": true,
         "module": "Preserve",
         "moduleResolution": "Bundler",
-        "noEmit": true
+        "noEmit": true,
+        "declaration": true,
+        "declarationMap": true,
+        "emitDeclarationOnly": true,
+        "outDir": "${configDir}/dist"
     },
     "exclude": ["node_modules", "build", "dist", ".next", ".expo"]
 }

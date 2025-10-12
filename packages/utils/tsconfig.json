@@ -1,5 +1,5 @@
 {
-    "extends": "@sooohka/tsconfig/internal-package.json",
+    "extends": "@sooohka/tsconfig/base.json",
     "compilerOptions": {
         "types": ["node"]
     },

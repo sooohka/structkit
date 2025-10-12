@@ -50,9 +50,6 @@ importers:
       tsup:
         specifier: ^8.5.0
         version: 8.5.0(@microsoft/api-extractor@7.53.1(@types/node@24.7.0))(postcss@8.5.6)(tsx@4.20.6)(typescript@5.9.3)(yaml@2.8.1)
-      vitest:
-        specifier: ^3.2.4
-        version: 3.2.4(@types/node@24.7.0)(tsx@4.20.6)(yaml@2.8.1)
 
   packages/utils:
     dependencies:
@@ -72,8 +69,6 @@ importers:
       tsx:
         specifier: ^4.20.6
         version: 4.20.6
-
-  tooling/github: {}
 
   tooling/typescript: {}
 

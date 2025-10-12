@@ -7,8 +7,11 @@ A native-like Queue implementation for TypeScript that behaves like built-in Jav
 - 🚀 **Native-like Behavior**: Registered as `global.Queue`, usable like `Array` or `Set`
 - 📦 **FIFO Data Structure**: Follows First-In-First-Out principle
 - 🔄 **Full Iterable Support**: Works with `for...of`, spread operator, destructuring, and more
-- 💪 **TypeScript First**: Complete type definitions with generic support
+- 💪 **TypeScript First**: Complete type definitions with generic support (`Queue<T>`, `ReadonlyQueue<T>`)
 - 🎯 **Array-like API**: Familiar iterator interface (`entries`, `keys`, `values`)
+- 🔍 **Node.js Inspect Support**: Beautiful console output with `util.inspect` customization
+- 🎨 **Flexible Construction**: Create from arrays, iterables, or variadic arguments
+- ♻️ **Explicit Resource Management**: Supports `Symbol.dispose` for automatic iterator cleanup
 - ⚡ **Zero Dependencies**: No external dependencies required
 
 ## Installation
@@ -22,16 +25,17 @@ pnpm install @sooohka/queue
 ### Basic Usage
 
 ```typescript
-import '@sooohka/queue'
+import '@sooohka/queue' // import this on your project's entry file
 
 // Create with new keyword
 const queue = new Queue<number>()
 
-// Or create without new
-const queue2 = Queue<string>()
+// Create with initial values (array)
+const queue2 = new Queue([1, 2, 3, 4, 5])
 
-// Create with initial values
-const queue3 = new Queue([1, 2, 3, 4, 5])
+// Create from any iterable
+const queue3 = new Queue(new Set([1, 2, 3]))
+
 ```
 
 ### Queue Operations
@@ -223,8 +227,28 @@ function slidingWindowMax(nums: number[], k: number): number[] {
 ### Constructor
 
 ```typescript
-new Queue<T>(values?: readonly T[] | null): Queue<T>
-Queue<T>(values?: readonly T[] | null): Queue<T>
+// With new keyword
+new Queue<T>(values?: readonly T[] | Iterable<T> | null): Queue<T>
+
+// Without new keyword (function call style)
+Queue<T>(): Queue<T>
+Queue<T>(...items: T[]): Queue<T>
+
+// From iterable
+new Queue<T>(iterable?: Iterable<T> | null): Queue<T>
+```
+
+**Parameters:**
+- `values` - Optional array or iterable to initialize the queue with
+- `...items` - Variable number of items to add to the queue (when called without `new`)
+
+**Examples:**
+```typescript
+const q1 = new Queue([1, 2, 3])           // from array
+const q2 = new Queue(new Set([1, 2, 3]))  // from Set
+const q3 = new Queue('abc')                // from string
+const q4 = Queue(1, 2, 3)                  // variadic
+const q5 = Queue<number>()                 // empty queue
 ```
 
 ### Methods
@@ -280,6 +304,28 @@ Returns an iterator of values.
 #### `size: number` (readonly)
 
 Returns the number of elements in the queue.
+
+#### `[Symbol.toStringTag]: string` (readonly)
+
+Returns `"Queue"` for Object.prototype.toString.call().
+
+
+**Features:**
+- ✅ Standard Iterator protocol (`next()`, `return()`, `throw()`)
+- ✅ Self-iterable (`[Symbol.iterator]()` returns itself)
+- ✅ Explicit Resource Management with `Symbol.dispose` (TC39 Stage 3)
+- ✅ Beautiful console output via `util.inspect`
+
+**Usage with `using` (Explicit Resource Management):**
+```typescript
+// Automatic cleanup with 'using' declaration
+{
+  using iterator = queue.values()
+  for (const value of iterator) {
+    if (value > 10) break  // Iterator automatically cleaned up
+  }
+} // Symbol.dispose called here
+```
 
 ## Development
 
