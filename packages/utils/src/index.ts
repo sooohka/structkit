@@ -1,2 +1,2 @@
-import '@sooohka/queue';
+import '@structkit/queue';
 

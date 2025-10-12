@@ -17,7 +17,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
 				type: "input",
 				name: "name",
 				message:
-					"What is the name of the package? (You can skip the `@sooohka/` prefix)",
+					"What is the name of the package? (You can skip the `@structkit/` prefix)",
 			},
 			{
 				type: "input",
@@ -31,9 +31,9 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
 				if (
 					"name" in answers &&
 					typeof answers.name === "string" &&
-					answers.name.startsWith("@sooohka/")
+					answers.name.startsWith("@structkit/")
 				) {
-					answers.name = answers.name.replace("@sooohka/", "");
+					answers.name = answers.name.replace("@structkit/", "");
 				}
 				return "Config sanitized";
 			},

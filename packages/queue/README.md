@@ -1,4 +1,4 @@
-# @sooohka/queue
+# @structkit/queue
 
 A native-like Queue implementation for TypeScript that behaves like built-in JavaScript data structures. Array-based implementation provides fast performance with complete type safety.
 
@@ -17,7 +17,7 @@ A native-like Queue implementation for TypeScript that behaves like built-in Jav
 ## Installation
 
 ```bash
-pnpm install @sooohka/queue
+pnpm install @structkit/queue
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ pnpm install @sooohka/queue
 ### Basic Usage
 
 ```typescript
-import '@sooohka/queue' // import this on your project's entry file
+import '@structkit/queue' // import this on your project's entry file
 
 // Create with new keyword
 const queue = new Queue<number>()

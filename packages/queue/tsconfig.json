@@ -1,6 +1,6 @@
 {
     "Schema": "https://json.schemastore.org/tsconfig",
-    "extends": "@sooohka/tsconfig/base.json",
+    "extends": "@structkit/tsconfig/base.json",
     "compilerOptions": {
         "types": ["node"]
     },

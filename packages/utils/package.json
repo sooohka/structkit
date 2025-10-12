@@ -1,5 +1,5 @@
 {
-    "name": "@sooohka/utils",
+    "name": "@structkit/utils",
     "version": "0.0.0",
     "private": true,
     "description": "utils integration for monorepo projects.",
@@ -17,10 +17,10 @@
         "typecheck": "tsc --noEmit --emitDeclarationOnly false"
     },
     "dependencies": {
-        "@sooohka/queue": "workspace:*"
+        "@structkit/queue": "workspace:*"
     },
     "devDependencies": {
-        "@sooohka/tsconfig": "workspace:*",
+        "@structkit/tsconfig": "workspace:*",
         "@types/node": "^24.7.0",
         "nodemon": "^3.1.10",
         "tsx": "^4.20.6"

@@ -38,7 +38,7 @@ importers:
 
   packages/queue:
     devDependencies:
-      '@sooohka/tsconfig':
+      '@structkit/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       '@types/jscodeshift':
@@ -53,11 +53,11 @@ importers:
 
   packages/utils:
     dependencies:
-      '@sooohka/queue':
+      '@structkit/queue':
         specifier: workspace:*
         version: link:../queue
     devDependencies:
-      '@sooohka/tsconfig':
+      '@structkit/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       '@types/node':
