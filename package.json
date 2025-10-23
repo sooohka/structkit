@@ -5,6 +5,10 @@
     "description": "",
     "author": "sooohka",
     "type": "module",
+    "repository":{
+      "type":"git",
+      "url": "git+https://github.com/sooohka/structkit.git"
+    },
     "scripts": {
         "dev": "turbo run dev",
         "build": "turbo run build",

@@ -1,8 +1,12 @@
 {
   "name": "@structkit/queue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "description": "A native-like Queue implementation with full TypeScript support and Array-like iterators",
+  "repository":{
+    "type":"git",
+    "url":"git+https://github.com/sooohka/structkit/tree/main/packages/queue"
+  },
   "keywords": [
     "queue",
     "data-structure",
